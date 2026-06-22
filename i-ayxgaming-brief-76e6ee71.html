@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 专题介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #faf9f7;
+      color: #2c2a28;
+      font-family: system-ui, -apple-system, 'Noto Serif SC', 'Times New Roman', serif;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+    }
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* hero */
+    .hero {
+      margin-top: 2rem;
+      margin-bottom: 3.5rem;
+      border-bottom: 1px solid #d9d5ce;
+      padding-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 350;
+      letter-spacing: -0.02em;
+      color: #1e1c1a;
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+    }
+    .hero .sub {
+      font-size: 1.1rem;
+      color: #736f69;
+      font-weight: 350;
+      border-left: 3px solid #b0a89d;
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    /* 背景卡片 */
+    .bg-note {
+      background: #f1eee9;
+      border-radius: 24px;
+      padding: 1.8rem 2rem;
+      margin: 2.2rem 0 3rem;
+      font-size: 0.98rem;
+      color: #3f3b36;
+    }
+    .bg-note strong {
+      font-weight: 500;
+      color: #1e1c1a;
+    }
+
+    /* 正文 */
+    .essay p {
+      margin-bottom: 1.6rem;
+      font-size: 1rem;
+    }
+    .essay .lead {
+      font-size: 1.12rem;
+      font-weight: 380;
+    }
+    .essay a {
+      color: #2c6a5e;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      transition: color 0.2s;
+    }
+    .essay a:hover {
+      color: #1c4840;
+    }
+
+    /* 特点小标 */
+    .feature-marker {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #8b857b;
+      border: 1px solid #d6d0c6;
+      padding: 0.1rem 0.7rem;
+      border-radius: 30px;
+      margin-right: 0.5rem;
+      font-weight: 400;
+      background: #f6f4f0;
+    }
+
+    /* 分层引用 */
+    .inset-quote {
+      background: transparent;
+      border-left: 2px solid #c9c1b4;
+      padding: 0.8rem 1.6rem;
+      margin: 1.8rem 0 2rem;
+      font-style: normal;
+      color: #48433d;
+      font-size: 0.95rem;
+    }
+
+    /* faq 摘要 */
+    .faq-mini {
+      margin: 2.4rem 0 2rem;
+      border-top: 1px dashed #d2ccc2;
+      padding-top: 2rem;
+    }
+    .faq-mini summary {
+      font-weight: 450;
+      cursor: default;
+      color: #2c2a28;
+      margin-bottom: 0.6rem;
+      font-size: 1rem;
+      list-style: none;
+    }
+    .faq-mini summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-mini .q-item {
+      margin-bottom: 1.2rem;
+    }
+    .faq-mini .q-item .q {
+      font-weight: 400;
+      color: #3b3732;
+    }
+    .faq-mini .q-item .a {
+      color: #5b5650;
+      font-size: 0.95rem;
+      padding-left: 0.8rem;
+      border-left: 1px solid #dad3c9;
+      margin-top: 0.2rem;
+    }
+
+    /* 页尾 */
+    .footer-note {
+      margin-top: 4rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #ddd7ce;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      color: #6b6660;
+    }
+    .footer-note .tag {
+      letter-spacing: 0.03em;
+    }
+
+    /* responsive */
+    @media (max-width: 520px) {
+      body {
+        padding: 1.2rem 1rem;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .bg-note {
+        padding: 1.4rem 1.2rem;
+      }
+      .inset-quote {
+        margin-left: 0;
+        padding-left: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero -->
+  <div class="hero">
+    <h1>爱游戏 · 站点记</h1>
+    <div class="sub">从一片专注的领域开始</div>
+  </div>
+
+  <!-- 背景说明 -->
+  <div class="bg-note">
+    <strong>背景</strong> · 数字世界中，游戏信息的分发既需要便捷，也需要可靠的参照。<a href="https://i-ayxgaming.com">爱游戏</a> 最初围绕这一需求构建，并非追逐流行，而是尝试提供一种更沉静的阅读与发现方式。以下三段文字分别从内容取向、可信框架与使用场景展开。
+  </div>
+
+  <!-- 三段自然介绍 -->
+  <div class="essay">
+
+    <p class="lead">
+      <span class="feature-marker">⛓ 其一</span>
+      这个站点关注的不是泛娱乐快讯，而是那些值得被留意的作品、机制与开发者脉络。每一则内容都经过编辑层面的筛选与再组织，试图在信息过载的缝隙中保留一点深度。<a href="https://i-ayxgaming.com">爱游戏</a> 的目录结构也反映了这种意图：分类不喧哗，导航不堆砌，让访问者能按自己的节奏浏览。
+    </p>
+
+    <p>
+      <span class="feature-marker">🕊 其二</span>
+      关于可信度：站点在信息引用上保持克制的习惯，标注来源、区分事实与观点，不刻意制造悬念或使用情绪化标题。这种内敛的风格可能不如热榜内容抢眼，但对于希望快速建立判断的读者而言，是一种稳定的参照。同时，<a href="https://i-ayxgaming.com">爱游戏</a> 并不嵌入任何竞价类广告或诱导分享组件，界面本身安静、清洁。
+    </p>
+
+    <div class="inset-quote">
+      “与其让用户花时间辨别广告与内容，不如直接呈现经过梳理的信息。” —— 这是页面背后一条朴素但有效的原则。
+    </div>
+
+    <p>
+      <span class="feature-marker">📎 其三</span>
+      实际使用中，你可以在 PC 或移动端直接打开站点，没有弹窗拦截，没有强制注册。无论是查询某款作品的背景，还是浏览近期专题，整个流程都像翻阅一本轻量的杂志。<a href="https://i-ayxgaming.com">爱游戏</a> 的响应式排版让长文阅读更舒适，而窄正文宽度正是刻意为之——减少视线扫射范围，提高吸收效率。
+    </p>
+  </div>
+
+  <!-- FAQ 摘要（简洁） -->
+  <div class="faq-mini">
+    <div class="q-item">
+      <div class="q">▸ 适合什么人访问？</div>
+      <div class="a">对游戏文化有兴趣的普通玩家、研究者，以及希望避开算法轰炸的读者。</div>
+    </div>
+    <div class="q-item">
+      <div class="q">▸ 内容更新频率如何？</div>
+      <div class="a">不以日更为目标，每篇编辑周期较长，注重内容沉淀而非速度。</div>
+    </div>
+    <div class="q-item">
+      <div class="q">▸ 是否收集用户数据？</div>
+      <div class="a">站点不设置追踪脚本、不储存个人标识，仅使用基础日志用于维护判断。</div>
+    </div>
+  </div>
+
+  <!-- 页尾访问提示 -->
+  <div class="footer-note">
+    <span>随时可访问 · 无入场门槛</span>
+    <span class="tag">i-ayxgaming.com</span>
+  </div>
+
+</div>
+</body>
+</html>
