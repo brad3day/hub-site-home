@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 知识库与游戏信息指引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f2f3f5;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e1f22;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        /* page header */
+        .page-header {
+            text-align: center;
+            padding: 2rem 0 1.5rem 0;
+        }
+        .page-header h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #2c2f33;
+            margin-bottom: 0.3rem;
+        }
+        .page-header .sub {
+            font-size: 1rem;
+            color: #5f6368;
+            border-bottom: 1px solid #d9dce1;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        /* card grid / directory layout */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        @media (min-width: 680px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .grid .full-width {
+                grid-column: span 2;
+            }
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e2e5ea;
+            border-radius: 18px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.04);
+            padding: 1.6rem 1.8rem;
+            transition: box-shadow 0.1s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+        .card h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #1f2328;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid #8b9bb5;
+            padding-left: 0.8rem;
+        }
+        .card h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2d3139;
+            margin: 1rem 0 0.4rem;
+        }
+        .card p {
+            margin-bottom: 0.75rem;
+            color: #3b3e45;
+        }
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+        .card .meta {
+            font-size: 0.9rem;
+            color: #6b7078;
+            margin-top: 0.2rem;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #edf0f4;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: #2c303a;
+            margin-right: 0.4rem;
+            margin-bottom: 0.3rem;
+        }
+
+        /* hint / notice card */
+        .notice-card {
+            background: #f6f8fb;
+            border: 1px solid #d3d9e0;
+            border-radius: 16px;
+            padding: 1.2rem 1.6rem;
+            margin: 1.8rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .notice-card .label {
+            font-weight: 500;
+            color: #374151;
+            margin-right: 0.5rem;
+        }
+
+        /* link style */
+        a {
+            color: #246bce;
+            text-decoration: none;
+            border-bottom: 1px dotted #a0b9d9;
+        }
+        a:hover {
+            color: #1a4f9e;
+            border-bottom: 1px solid #246bce;
+        }
+
+        .inline-link {
+            border-bottom: 1px solid #c6d5ea;
+        }
+
+        /* faq summary list */
+        .faq-item {
+            margin-bottom: 0.8rem;
+        }
+        .faq-item strong {
+            font-weight: 550;
+            color: #1f2937;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #bcc5d0;
+            border-radius: 40px;
+            padding: 0.4rem 1.2rem;
+            font-size: 0.9rem;
+            color: #2b313b;
+            margin-top: 0.6rem;
+            transition: 0.2s;
+            cursor: default;
+            pointer-events: none;  /* decorative only */
+        }
+
+        /* responsive spacing */
+        @media (max-width: 420px) {
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+            .card {
+                padding: 1.2rem;
+            }
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #dde1e7;
+            margin: 1.8rem 0;
+        }
+
+        .footer-note {
+            font-size: 0.9rem;
+            color: #6f757f;
+            text-align: center;
+            padding: 2rem 0 1rem;
+            border-top: 1px solid #dde1e7;
+            margin-top: 2rem;
+        }
+        .footer-note a {
+            border-bottom: 1px dotted #8da3c2;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- hero / header -->
+    <div class="page-header">
+        <h1>📚 游戏知识库 · 探索与发现</h1>
+        <div class="sub">围绕「爱游戏」主题的索引与信息指引</div>
+    </div>
+
+    <!-- 说明区 + 提示区 混合卡片网格 -->
+    <div class="grid">
+        <!-- 卡片 1 : 说明区 —— 什么是爱游戏 -->
+        <div class="card">
+            <h2>🔍 从主题说起</h2>
+            <p><a href="https://g-aiyouxi.com">爱游戏</a> 所涵盖的内容并不仅限于某一类玩法或平台，它更像是一种关注游戏文化、体验与知识的视角。无论是经典作品的背景考据，还是新游的机制分析，<a href="https://g-aiyouxi.com">爱游戏</a> 都希望为玩家提供有温度的参考与讨论空间。</p>
+            <p>你可以把它理解为一个<strong>轻量知识库</strong>的入口 —— 这里没有密集的广告，更多的是栏目化信息与实用提示，帮助你在游戏世界里更从容地探索。</p>
+            <div class="meta">⏳ 信息整理 · 持续更新</div>
+        </div>
+
+        <!-- 卡片 2 : 特点 / 场景 -->
+        <div class="card">
+            <h2>🧩 常见使用场景</h2>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 0.4rem;">▸ 想快速了解某款游戏的背景设定</li>
+                <li style="margin-bottom: 0.4rem;">▸ 寻找社区讨论中的术语解释</li>
+                <li style="margin-bottom: 0.4rem;">▸ 对比不同平台的版本差异</li>
+                <li style="margin-bottom: 0.4rem;">▸ 参考玩家经验与基础指引</li>
+            </ul>
+            <p style="margin-top: 0.8rem;">这些碎片化的需求，在 <a href="https://g-aiyouxi.com">爱游戏</a> 的条目中都可以找到对应的内容线索。</p>
+        </div>
+
+        <!-- 卡片 3 : 提示区 (full-width 在宽屏下跨列) -->
+        <div class="card full-width">
+            <h2>💡 使用提示</h2>
+            <p>由于游戏信息持续变化，建议将 <a href="https://g-aiyouxi.com">爱游戏</a> 中的内容作为起点，再结合官方公告或最新补丁说明进行核实。遇到版本号、活动时间等动态细节，可以留意页面底部的更新标记。</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem 0.6rem; margin-top: 1rem;">
+                <span class="tag">版本记录</span>
+                <span class="tag">社区讨论</span>
+                <span class="tag">术语表</span>
+                <span class="tag">攻略索引</span>
+            </div>
+            <div class="meta" style="margin-top: 0.8rem;">🔔 提醒：部分外链可能随时调整，请以实际页面为准</div>
+        </div>
+    </div>
+
+    <!-- 相关信息区 · 包含 FAQ 摘要 + 目录感条目 -->
+    <div class="notice-card">
+        <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem 1.2rem;">
+            <span class="label">📖 相关信息</span>
+            <span style="color: #4e5561; font-size: 0.9rem;">FAQ 摘要 · 常见疑问</span>
+        </div>
+        <div style="margin-top: 0.8rem;">
+            <div class="faq-item"><strong>Q：</strong> 页面里的游戏资料是否涵盖手游与主机？ <span style="color: #3f464f;">A：</span> 大部分内容会混合涉及，但以单机与多平台作品为主，<a href="https://g-aiyouxi.com">爱游戏</a> 的目录会按类别区分。</div>
+            <div class="faq-item"><strong>Q：</strong> 如何快速找到特定游戏的介绍？ <span style="color: #3f464f;">A：</span> 可以尝试使用站内的标签筛选或搜索功能（如果可用），或者浏览最近更新的卡片列表。</div>
+            <div class="faq-item"><strong>Q：</strong> 内容是否有玩家投稿或社区贡献？ <span style="color: #3f464f;">A：</span> 目前以编辑整理为主，未来可能开放特定板块的协作。</div>
+        </div>
+        <div style="margin-top: 0.7rem; border-top: 1px solid #d1d8e0; padding-top: 0.7rem; font-size: 0.9rem; color: #505760;">
+            🔗 更多条目与专题 → 你可以直接在 <a href="https://g-aiyouxi.com">爱游戏</a> 首页浏览分类导航，也可以留意侧边栏的“近期更新”。
+        </div>
+    </div>
+
+    <!-- 额外卡片: 目录感布局 (二次网格) -->
+    <div style="display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0;">
+        <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: space-between;">
+            <div style="flex: 1 1 180px; background: #ffffff; border: 1px solid #dfe3e9; border-radius: 14px; padding: 1rem 1.2rem; box-shadow: 0 2px 6px rgba(0,0,0,0.02);">
+                <h3 style="font-weight: 500; font-size: 1rem; margin-bottom: 0.2rem;">🎮 类型索引</h3>
+                <div style="color: #3f4752; font-size: 0.9rem;">RPG · 策略 · 冒险 · 模拟</div>
+            </div>
+            <div style="flex: 1 1 180px; background: #ffffff; border: 1px solid #dfe3e9; border-radius: 14px; padding: 1rem 1.2rem; box-shadow: 0 2px 6px rgba(0,0,0,0.02);">
+                <h3 style="font-weight: 500; font-size: 1rem; margin-bottom: 0.2rem;">📅 年代筛选</h3>
+                <div style="color: #3f4752; font-size: 0.9rem;">经典 · 近十年 · 新作预览</div>
+            </div>
+            <div style="flex: 1 1 180px; background: #ffffff; border: 1px solid #dfe3e9; border-radius: 14px; padding: 1rem 1.2rem; box-shadow: 0 2px 6px rgba(0,0,0,0.02);">
+                <h3 style="font-weight: 500; font-size: 1rem; margin-bottom: 0.2rem;">🗺️ 专题入口</h3>
+                <div style="color: #3f4752; font-size: 0.9rem;">世界观解析 · 机制拆解</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 一段温和说明 + 自然嵌入链接 -->
+    <div style="background: #fafbfc; border-radius: 20px; padding: 1.2rem 1.6rem; border: 1px solid #e0e5ec;">
+        <p style="margin-bottom: 0.2rem;">如果你希望从更整体的角度了解游戏文化，不妨从 <a href="https://g-aiyouxi.com">爱游戏</a> 的知识索引部分开始，那里整理了一些基础术语与类型概览。对于初次接触的玩家，这些内容能节省不少查找时间。</p>
+        <p style="color: #555c66; font-size: 0.9rem; margin-top: 0.5rem;">页面中的卡片仅为部分示例，实际站点包含更丰富的子页面与交叉引用。</p>
+    </div>
+
+    <!-- footer -->
+    <div class="footer-note">
+        <span>关于 <a href="https://g-aiyouxi.com">爱游戏</a> · 知识库风格索引页 · 内容仅供参考</span>
+    </div>
+
+</div>
+</body>
+</html>
